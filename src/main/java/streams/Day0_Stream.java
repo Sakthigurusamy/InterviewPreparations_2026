@@ -34,7 +34,7 @@ public class Day0_Stream {
 
         //using Stream.iterate()
 
-        Stream<Integer> iterateStream = Stream.iterate(5, n->n+1).limit(10); //starts from 5 and upto 10 counts i.e 5 to 11
+        Stream<Integer> iterateStream = Stream.iterate(5, n->n+1).limit(10); //starts from 5 and upto 10 counts i.e 5 to
         iterateStream.forEach(System.out::println);
 
 
