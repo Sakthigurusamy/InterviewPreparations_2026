@@ -73,7 +73,7 @@ public class Day1_InterviewQuestions {
         long count = employeeNames.stream().count();
         System.out.println("Total Employees: " +count);
 
-        
+
 
     }
 }
