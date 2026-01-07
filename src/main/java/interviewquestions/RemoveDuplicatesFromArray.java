@@ -8,15 +8,34 @@ public class RemoveDuplicatesFromArray {
 
     public static void main(String[] args) {
 
-        Integer[] numbers = {1,2,3,4,5,6,2,4,3,1,4,7,8,8,7,9,10};
+        //using Set
 
-        //Put it into HashSet
+        int[] number = {10,1,2,1,2,1,3,4,5,3,4,5,6,7,9,8};
 
-        Set<Integer> hashSet = new HashSet<>(Arrays.asList(numbers));
+        //Create Set
+        Set<Integer> integers = new HashSet<>();
 
-        Integer[] withoutDuplicate = hashSet.toArray(new Integer[0]);
+        for(int num:number){
+            integers.add(num);
+        }
 
-        System.out.println(Arrays.toString(withoutDuplicate));
+        //resultSet creation
+        int[] resultSet = new int[integers.size()];
+
+        int i = 0;
+
+        for(int num: integers){
+            resultSet[i++] = num;
+        }
+
+        System.out.println(Arrays.toString(resultSet));
+
+        //using Streams
+
+        int[] number_1 = {1,2,3,4,5,6,2,4,3,1,4,7,8,8,7,9,10};
+
+        int[] withoutDuplicateUsingStream = Arrays.stream(number_1).distinct().toArray();
+        System.out.println(Arrays.toString(withoutDuplicateUsingStream));
     }
 
 
